@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+<body>
+    <main class="main" id="main">
+        <div class="container-fluid all-contain">
+            <div class="row g-0 text-center">
+                <div class="col-sm-6 col-md-8" style="margin-bottom: 8rem;">
+                    <h4>Liste de tache</h4><br>
+                    <div class="container d-flex">
+                      <div class="table-responsive table-content">
+                        <table class="table table-hover">
+                           <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Date</th>
+                                <th scope="col">Titre</th>
+                                <th scope="col">Categorie</th>
+                                <th scope="col">Opérations</th>
+                              </tr>
+                           </thead>
+                           <tbody class="table-group-divider" id="tasks-rows">
+                           
+                          </tbody>
+                          </table>
+                        </div>
+                    </div>
+                    <div class="line0"></div>
+                    <h4 class="desc text-center mb-4">Description</h4>
+                    <div class="descContent" id="description-content">
+
+                    </div>
+
+                </div>
+                <div class="col-sm-6 col-md-4 add-task">
+                    <h4>Ajouter Une tache</h4>
+                    <div class="input-group">
+                      <select class="select input-group mb-3 mx-3" id="categorie">
+                        <option>Académique</option>
+                        <option>Job</option>
+                        <option>Projets</option>
+                      </select>
+                      <div class="input-group mb-3 mx-3">
+                        <input id="title-input" type="text" class="form-control" placeholder="Title">
+                      </div>
+                      <div class="input-group mb-3 mx-3">
+                        <input id="date-input" type="date" class="form-control" placeholder="date"> 
+                      </div>
+                      <div class="input-group mb-3 mx-3 textArea">
+                        <textarea id="desc-input" class="form-control" aria-label="With textarea" placeholder="Description"></textarea>
+                      </div>
+                      <select class="select input-group mb-3 mx-3" id="status-input">
+                        <option>Début</option>
+                        <option>Moyen</option>
+                        <option>Terminer</option>
+                      </select>
+                      <div class="btn-container" id="btn-div">
+                        <button class="btn1 mb-3" id="submitTodo">
+                          Add Todo
+                        </button>
+                      </div>
+                      
+                      <div class="line mb-3"></div><br><br>
+                      <h2 class="m-auto">STATUS</h2>
+                      <div>
+                        <canvas id="myChart"></canvas>
+                      </div>
+                    </div>
+                </div>
+              </div>
+        </div>
+        <div class="preview" id="preview2">
+          <div class="head">Task Preview</div>
+          <ul id="preview-ul">
+          </ul>
+        </div>
+        <div class="notification" id="notif">
+          Task Added
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        
+    </main>
+
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+</body>
+</html>
