@@ -24,7 +24,9 @@ const AddTasks = ()=>{
     description : descInput.value,
     status : statusInput.value,
     id: Date.now()  
+   
   };
+
   tasksList.push(task);
   localStorage.setItem('tasks', JSON.stringify(tasksList));
 if (statusInput.value === 'Début'){
@@ -60,8 +62,9 @@ function displayTasks() {
     });
     const eyeIcon = tableRow.querySelector('.bi-eye');
     eyeIcon.addEventListener('click', () => {
+      const tableRow = document.createElement('tr');
       previewContent.style.display = 'block';
-      preview.innerHTML = ` 
+      preview.innerHTML = `
       <ul class="singleUl"><li>Title</li> <li>${task.title}</li></ul>
       <ul class="singleUl"><li>Categorie</li> <li>${task.categorie}</li></ul>
       <ul class="singleUl"><li>Description</li> <li>${task.description}</li></ul>
@@ -87,8 +90,6 @@ function displayTasks() {
   localStorage.setItem('moyen', JSON.stringify(moyen));
   localStorage.setItem('terminer', JSON.stringify(terminer));
       tableRow.innerHTML = '';
-
-
       displayTasks();
       createChart();
 
@@ -119,7 +120,7 @@ localStorage.setItem('terminer', JSON.stringify(terminer));
     const saveButton = document.createElement('button');
     saveButton.addEventListener('click', () => {
       // Mettez à jour les propriétés de la tâche avec les nouvelles valeurs
-      console.log(taskToEdit.date);
+   
       taskToEdit.date = dateInput.value;
       taskToEdit.title = titleInput.value;
       taskToEdit.categorie = categorieInput.value;
@@ -210,7 +211,7 @@ function createChart(){
   type: 'doughnut',
   data: {
     datasets: [{
-      label: '# of Votes',
+      label: 'Nombres',
       data: [debut, moyen, terminer],
       backgroundColor: ["red", "blue", "black"],
       borderWidth: 2
